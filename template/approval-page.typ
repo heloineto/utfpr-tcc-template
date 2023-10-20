@@ -37,7 +37,8 @@
   city: "",
   year: "",
   goal: [],
-  date: datetime.today()
+  approval-date: datetime.today(),
+  approvers: (),
 ) = {
   [
     #set align(center)
@@ -73,28 +74,17 @@
     )[
       #set text(size: 10pt, weight: "regular")
 
-      Data de aprovação: #date.display("[day]")/#months.at(date.month() - 1)/#date.display("[year]")
+      Data de aprovação: #approval-date.display("[day]")/#months.at(approval-date.month() - 1)/#approval-date.display("[year]")
 
     ]
 
-    #approver-field(
-      name: "Nome completo e por extenso do Membro 1 (de acordo com o Currículo Lattes)",
-      title: "Titulação (Especialização, Mestrado, Doutorado)",
-      institution: "Nome completo e por extenso da instituição a qual possui vínculo",
-    )
-    #v(3em)
-    #approver-field(
-      name: "Nome completo e por extenso do Membro 1 (de acordo com o Currículo Lattes)",
-      title: "Titulação (Especialização, Mestrado, Doutorado)",
-      institution: "Nome completo e por extenso da instituição a qual possui vínculo",
-    )
-    #v(3em)
-    #approver-field(
-      name: "Nome completo e por extenso do Membro 1 (de acordo com o Currículo Lattes)",
-      title: "Titulação (Especialização, Mestrado, Doutorado)",
-      institution: "Nome completo e por extenso da instituição a qual possui vínculo",
-    )
-
+    #text(approvers.map(approver =>
+      approver-field(
+        name: approver.name,
+        title: approver.title,
+        institution: approver.institution,
+      )
+    ).join(v(3em)))
 
     #align(bottom)[
       #upper(city)

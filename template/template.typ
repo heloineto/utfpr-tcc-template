@@ -48,6 +48,8 @@
   abstract: [],
   english-keywords: (),
   english-abstract: [],
+  approval-date: datetime.today(),
+  approvers: (),
   acknowledgment: [],
   body,
 ) = {
@@ -102,6 +104,8 @@
     city: city,
     year: year,
     goal: goal,
+    approval-date: approval-date,
+    approvers: approvers,
   )
 
   acknowledgment-page(acknowledgment)

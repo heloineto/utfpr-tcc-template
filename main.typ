@@ -9,10 +9,25 @@
   english-title: "Put your english title here",
   city: "CIDADE",
   year: "ANO DA ENTREGA",
-  goal: [
-    Trabalho de conclusão de curso de graduação/Dissertação/Tese apresentada como requisito para obtenção do título de Bacharel/Licenciado/Tecnólogo/Mestre/Doutor em Nome do Curso/Programa da Universidade Tecnológica Federal do Paraná (UTFPR).
-  ],
   adivsor: "Orientador(a): Nome completo e por extenso.",
+  approval-date: datetime(day: 19, month: 9, year: 2023),
+  approvers: (
+    (
+      name: "Nome completo e por extenso do Membro 1 (de acordo com o Currículo Lattes)",
+      title: "Titulação (Especialização, Mestrado, Doutorado)",
+      institution: "Nome completo e por extenso da instituição a qual possui vínculo",
+    ),
+    (
+      name: "Nome completo e por extenso do Membro 2 (de acordo com o Currículo Lattes)",
+      title: "Titulação (Especialização, Mestrado, Doutorado)",
+      institution: "Nome completo e por extenso da instituição a qual possui vínculo",
+    ),
+    (
+      name: "Nome completo e por extenso do Membro 3 (de acordo com o Currículo Lattes)",
+      title: "Titulação (Especialização, Mestrado, Doutorado)",
+      institution: "Nome completo e por extenso da instituição a qual possui vínculo",
+    ),
+  ),
   keywords: (
     "ferramenta",
     "trabalhos acadêmicos",
@@ -20,6 +35,9 @@
     "editor de documentos",
     "desenvolvimento web",
   ),
+  goal: [
+    Trabalho de conclusão de curso de graduação/Dissertação/Tese apresentada como requisito para obtenção do título de Bacharel/Licenciado/Tecnólogo/Mestre/Doutor em Nome do Curso/Programa da Universidade Tecnológica Federal do Paraná (UTFPR).
+  ],
   abstract: [
     Um dos desafios enfrentados pelos pesquisadores é a formatação de trabalhos acadêmicos, o que consome uma quantidade significativa de tempo e recursos (KHAN, 2018). A não conformidade com as diretrizes de formatação estabelecidas pelas instituições e revistas científicas pode resultar na rejeição dos trabalhos submetidos (ALI, 2010). Com o objetivo de solucionar esse problema, este trabalho propõe o desenvolvimento de um sistema que auxilie os escritores na redação de trabalhos científicos por meio de modelos de formatação predefinidos. Essa ferramenta garantirá o cumprimento de aspectos como margens, fontes e espaçamentos, além de automatizar tarefas repetitivas, como a criação de listas, sumário e referências. Dessa forma, espera-se reduzir o tempo gasto em revisões e aumentar a qualidade dos trabalhos. A implementação dessa ferramenta promoverá a produtividade dos escritores, uma vez que eles poderão direcionar seu tempo para a produção dos conteúdos, em oposição à formatação do documento. Para iniciar e demonstrar a eficácia do sistema proposto, será direcionado o foco em auxiliar os alunos dos cursos de graduação da UTFPR na escrita do Trabalho de Conclusão de Curso (TCC). Isso ocorrerá por meio da criação de modelos de formatação específicos para as diretrizes estabelecidas pela instituição, garantindo assim a conformidade dos trabalhos dos alunos com os requisitos exigidos.
   ],
