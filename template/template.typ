@@ -164,3 +164,22 @@
 
   body
 }
+
+#let original-figure = figure;
+#let figure = (
+  content,
+  placement: none,
+  caption: none,
+  kind: auto,
+  source: "",
+  label: none,
+) => [
+  #set align(center)
+  #set text(weight: "bold", size: 10pt)
+  #set figure.caption(position: top, separator: " – ")
+  #original-figure(
+    content,
+    caption: caption,
+  ) #label
+  Fonte: #source
+]

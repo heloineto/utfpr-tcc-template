@@ -98,31 +98,21 @@ Texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, tex
 
 Texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto.
 
-@figure
-
-#let original-figure = figure;
-
-#let figure = (
-  content,
-  placement: none,
-  caption: none,
-  kind: auto,
-  source: "",
-) => [
-  #set align(center)
-  #set text(weight: "bold", size: 10pt)
-  #set figure.caption(position: top, separator: " – ")
-  #original-figure(
-    content,
-    caption: caption,
-  ) <figure>
-  Fonte: #source
-]
+@figure1
+@figure2
 
 #pagebreak()
 
 #figure(
   image("profile.jpg", width: 80%),
   caption: "Foto de perfil",
-  source: "Autoria própria (2023)"
+  source: "Autoria própria (2023)",
+  label: <figure1>
+)
+
+#figure(
+  image("profile.jpg", width: 80%),
+  caption: "Foto de perfil",
+  source: "Autoria própria (2023)",
+  label: <figure2>
 )
