@@ -113,12 +113,22 @@
   abstract-page(lang: "pt", keywords: keywords, abstract)
   abstract-page(lang: "en", keywords: english-keywords, english-abstract)
 
+  show outline.entry: it => {
+    let fields = it.fields()
+    let (number, ..rest) = it.body.children
+
+    // Stops
+    if number.func() == box {
+      return it
+    }
+
+    let body = ((box(width: 55pt,number),) + rest).join()
+    fields.at("body") = body
+    outline.entry(..fields.values())
+  }
 
   show outline.entry: it => [
-    // TODO: Verify if it's necessary to use grid
-    // for the markers
-    #headings(it)
-    #v(-16pt)
+    #box(headings(it), height: 1.25em)
   ]
 
   outline(

@@ -58,31 +58,51 @@
 
 = INTRODUÇÃO
 
-Os autores de trabalhos científicos precisam seguir padrões para citação, estilo e formatação (TURABIAN, 2013). Segundo Watson (1992), à medida que os computadores se tornaram amplamente disponíveis, softwares de processamento de texto começaram a ser usados para escrever e editar documentos. Desde então, a preparação de documentos tem sido uma ferramenta cada vez mais importante.
+Parte inicial do texto, na qual devem constar o tema e a delimitação do assunto tratado, objetivos da pesquisa e outros elementos necessários para situar o tema do trabalho. Após o início de uma seção, recomenda-se a inserção de um texto ou, no mínimo, uma nota explicativa sobre a seção iniciada. Evitar, por exemplo:
 
-A sofisticação destes programas aumentou ao longo dos anos, evoluindo de sistemas que se destinavam a produzir textos simples para ferramentas nas quais é possível especificar equações, tabelas, desenhos e outros componentes do documento. Os sistemas modernos aprimoram a facilidade com que estes componentes podem ser descritos, muitas vezes por meio de uma interface visual (FURUTA, 1992).
+= INTRODUÇÃO
+== Contextualização
+=== Memorial da pesquisa
 
-==	Objetivos
 
-O objetivo geral deste trabalho consiste em desenvolver um sistema que auxilie na escrita de trabalhos científicos por meio de modelos de formatação predefinidos, inicialmente focado em auxiliar os alunos dos cursos de graduação da UTFPR na redação do Trabalho de Conclusão de Curso (TCC).
+== Paginação
 
-===	Objetivo Geral
+Todas as folhas do trabalho, a partir da folha de rosto, devem ser contadas sequencialmente, mas não numeradas. A numeração deve ser inserida à partir da primeira folha da parte textual (Introdução), em algarismos arábicos, no canto superior direito da folha. Havendo apêndices e anexos, as suas folhas devem ser paginadas de maneira contínua.
 
-O objetivo geral deste trabalho consiste em desenvolver um sistema que auxilie na escrita de trabalhos científicos por meio de modelos de formatação predefinidos, inicialmente focado em auxiliar os alunos dos cursos de graduação da UTFPR na redação do Trabalho de Conclusão de Curso (TCC).
+== Exemplos de utilização de numeração progressiva
 
-===	Objetivos Específicos
+Nos títulos com indicativo numérico não se utilizam pontos, hífen, travessão, ou qualquer sinal após o indicativo de seção ou de título.
+A numeração progressiva para as seções do texto deve ser adotada para evidenciar a sistematização do conteúdo do trabalho.
+Destacam-se gradativamente os títulos das seções, utilizando-se tipograficamente com recursos como letra maiúscula, negrito, itálico ou sublinhado.
+No sumário, os títulos devem aparecer de forma idêntica ao texto.
+Ver os exemplos na folha seguinte:
 
-Os objetivos específicos são:
+=	SEÇÃO PRIMÁRIA (CAIXA ALTA E NEGRITO)
 
-- Avaliar as ferramentas de formatação atuais, categorizando os seus problemas e melhores recursos em sua relevância;
-- Desenvolver a ferramenta de formatação proposta;
-- Avaliar o uso da ferramenta com usuários.
+As seções primárias devem iniciar sempre em páginas distintas. Entre uma seção e outra sempre haverá um texto.
+Texto justificado, com recuo especial na primeira linha de 1,5 cm. Não utilizar tab (1,25 cm). Os títulos das seções devem ser separados do texto que os precede por 1 (um) espaço (1,5 cm).
 
-+ Avaliar as ferramentas de formatação atuais, categorizando os seus problemas e melhores recursos em sua relevância;
-+ Desenvolver a ferramenta de formatação proposta;
-+ Avaliar o uso da ferramenta com usuários.
+==	Seção secundária (negrito)
 
-#let fig = (
+Texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto.
+
+===	Seção terciária (sem negrito)
+
+Texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto.
+
+====	 Seção quaternária (sublinhado)
+
+Texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto.
+
+=====	Seção quinária (itálico)
+
+Texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto.
+
+@figure
+
+#let original-figure = figure;
+
+#let figure = (
   content,
   placement: none,
   caption: none,
@@ -92,29 +112,16 @@ Os objetivos específicos são:
   #set align(center)
   #set text(weight: "bold", size: 10pt)
   #set figure.caption(position: top, separator: " – ")
-  #figure(
+  #original-figure(
     content,
     caption: caption,
   ) <figure>
   Fonte: #source
 ]
 
-// #show figure: (it) => [
-//   #set align(center)
-//   #set text(weight: "bold", size: 10pt)
-//   #it.caption
-//   #it.body
-// ]
-
-// #figure(
-//   image("profile.jpg", width: 80%),
-//   caption: [A curious figure.],
-// ) <glacier>
-
 #pagebreak()
 
-
-#fig(
+#figure(
   image("profile.jpg", width: 80%),
   caption: "Foto de perfil",
   source: "Autoria própria (2023)"
