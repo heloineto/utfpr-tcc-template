@@ -68,6 +68,7 @@
     lang: "pt",
     font: "Arial",
   )
+  set cite(style: "chicago-author-date");
 
   set heading(numbering: "1.1")
   show heading: it => [
@@ -115,9 +116,13 @@
 
   show outline.entry: it => {
     let fields = it.fields()
+    if it.body.at("children", default: false) == false {
+      return [#box(width: 55pt) #it]
+    }
+
     let (number, ..rest) = it.body.children
 
-    // Stops
+    // Stops recursion
     if number.func() == box {
       return it
     }
@@ -153,6 +158,17 @@
 
   pagebreak()
 
+  outline(
+    title: [
+      #set align(center)
+      #block(width: 100%, "LISTA DE QUADROS")
+      #v(30pt)
+    ],
+    target: figure.where(kind: "board"),
+  )
+
+  pagebreak()
+
   set page(numbering: "1", number-align: top + right)
   set par(
     justify: true,
@@ -163,23 +179,35 @@
   show enum: it => pad(x: 1.5cm + 0.75cm, it)
 
   body
+
+  pagebreak()
+
+  show bibliography: it => [
+    #show heading: it => align(center, text(size: 12pt, weight: "bold", it))
+    #it
+  ]
+
+  bibliography(
+    "../main.bib",
+    style: "chicago-author-date",
+    title: "REFERÊNCIAS"
+  )
 }
 
 #let original-figure = figure;
 #let figure = (
   content,
   placement: none,
-  caption: none,
-  kind: auto,
   source: "",
   label: none,
+  ..rest
 ) => [
   #set align(center)
   #set text(weight: "bold", size: 10pt)
   #set figure.caption(position: top, separator: " – ")
   #original-figure(
     content,
-    caption: caption,
+    ..rest
   ) #label
-  Fonte: #source
+  Fonte: #source,
 ]

@@ -116,3 +116,27 @@ Texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, tex
   source: "Autoria própria (2023)",
   label: <figure2>
 )
+
+#figure(
+  table(
+    columns: (auto, auto),
+    inset: 10pt,
+    align: horizon,
+    [*Area*], [*Parameters*],
+    $ pi h (D^2 - d^2) / 4 $,
+    [
+      $h$: height \
+      $D$: outer radius \
+      $d$: inner radius
+    ],
+    $ sqrt(2) / 12 a^3 $,
+    [$a$: edge length]
+  ),
+  caption: "Foto de perfil",
+  source: "Autoria própria (2023)",
+  kind: "board",
+  supplement: [Quadro],
+  label: <figure3>
+)
+
+Hello #cite("10.5032/jae.2014.05030").
