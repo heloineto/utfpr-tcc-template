@@ -14,17 +14,17 @@
   approvers: (
     (
       name: "Nome completo e por extenso do Membro 1 (de acordo com o Currículo Lattes)",
-      title: "Titulação (Especialização, Mestrado, Doutorado)",
+      degree: "Titulação (Especialização, Mestrado, Doutorado)",
       institution: "Nome completo e por extenso da instituição a qual possui vínculo",
     ),
     (
       name: "Nome completo e por extenso do Membro 2 (de acordo com o Currículo Lattes)",
-      title: "Titulação (Especialização, Mestrado, Doutorado)",
+      degree: "Titulação (Especialização, Mestrado, Doutorado)",
       institution: "Nome completo e por extenso da instituição a qual possui vínculo",
     ),
     (
       name: "Nome completo e por extenso do Membro 3 (de acordo com o Currículo Lattes)",
-      title: "Titulação (Especialização, Mestrado, Doutorado)",
+      degree: "Titulação (Especialização, Mestrado, Doutorado)",
       institution: "Nome completo e por extenso da instituição a qual possui vínculo",
     ),
   ),
@@ -125,8 +125,8 @@ Texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, texto, tex
     [*Area*], [*Parameters*],
     $ pi h (D^2 - d^2) / 4 $,
     [
-      $h$: height \
-      $D$: outer radius \
+      $h$: height
+      $D$: outer radius
       $d$: inner radius
     ],
     $ sqrt(2) / 12 a^3 $,

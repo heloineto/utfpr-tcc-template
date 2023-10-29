@@ -16,7 +16,7 @@
 
 #let approver-field(
   name: "",
-  title: "",
+  degree: "",
   institution: "",
 ) = {
   [
@@ -25,7 +25,7 @@
     #line(length: 100%, stroke: 0.5pt)
     #name
     #linebreak()
-    #title
+    #degree
     #linebreak()
     #institution
   ]
@@ -81,7 +81,7 @@
     #text(approvers.map(approver =>
       approver-field(
         name: approver.name,
-        title: approver.title,
+        degree: approver.degree,
         institution: approver.institution,
       )
     ).join(v(3em)))

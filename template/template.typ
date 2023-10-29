@@ -209,5 +209,5 @@
     content,
     ..rest
   ) #label
-  Fonte: #source,
+  Fonte: #source
 ]
