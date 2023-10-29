@@ -9,7 +9,7 @@
   english-title: "Put your english title here",
   city: "CIDADE",
   year: "ANO DA ENTREGA",
-  adivsor: "Orientador(a): Nome completo e por extenso.",
+  advisor: "Orientador(a): Nome completo e por extenso.",
   approval-date: datetime(day: 19, month: 9, year: 2023),
   approvers: (
     (

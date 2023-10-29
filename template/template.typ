@@ -43,7 +43,7 @@
   year: "",
   english-title: "",
   goal: [],
-  adivsor: "",
+  advisor: "",
   keywords: (),
   abstract: [],
   english-keywords: (),
@@ -96,7 +96,7 @@
     city: city,
     year: year,
     goal: goal,
-    adivsor: adivsor,
+    advisor: advisor,
   )
 
   approval-page(

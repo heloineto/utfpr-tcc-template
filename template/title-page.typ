@@ -4,7 +4,7 @@
   city: "",
   year: "",
   english-title: "",
-  adivsor: "",
+  advisor: "",
   goal: []
 ) = {
   [
@@ -35,7 +35,7 @@
 
         #goal
         #linebreak()
-        #adivsor
+        #advisor
       ]
     ]
 
